@@ -1,0 +1,164 @@
+@font-face {
+  font-family: Proxima Nova;
+  src: url(../fonts/proxima/proximanova_regular.ttf);
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/poppins/Poppins-Medium.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: serif;
+  padding-top: 27px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #fff;
+}
+
+nav {
+  padding: 30px 0;
+}
+
+.nav-items1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lang-currency {
+  gap: 130px;
+}
+
+select {
+  font-family: Proxima Nova;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24.36px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.sub-nav-items1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.sub-nav-items1 a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: Proxima Nova;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24.36px;
+  text-align: left;
+}
+
+.nav2 {
+  display: flex;
+  align-items: center;
+  gap: 311px;
+}
+
+.nav-items {
+  display: flex;
+  gap: 100px;
+}
+
+.nav-items a {
+  text-transform: uppercase;
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: left;
+
+  &:hover {
+    color: #40bfff;
+  }
+}
+
+.hero {
+  padding-top: 167px;
+}
+
+.hero-content h1 {
+  font-family: Poppins;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 96px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.hero-content {
+  padding: 258px 425px 167px 110px;
+  margin: 0px -88px;
+  background: url(../images/Promotion\ Image.png);
+  background-size: contain;
+}
+
+.hero-content h1 {
+  max-width: 600px;
+  width: 100%;
+  font-family: Poppins;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 96px;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+.categories-products {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin: 64px;
+}
+
+.title h1 {
+  font-family: Poppins;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 52.5px;
+  text-align: left;
+  margin-bottom: 26px;
+}
+
+.categories {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+}
