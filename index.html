@@ -28,9 +28,11 @@
                 ><img src="./images/user.svg" alt="user" />
                 <p>My profile</p></a
               >
-              <a href="#" class="nav-link"
+              <a  class="nav-link" id = "cart-button"
                 ><img src="./images/Cart.svg" alt="cart"
-              /></a>
+              />
+              <p class="cart-count"></p>
+            </a>
               <a href="#" class="nav-link">Items</a>
               <a href="#" class="nav-link">$ 0.00</a>
               <a href="#" class="nav-link"
@@ -74,6 +76,29 @@
             <div class="categories"></div>
             <div class="products"></div>
             
+        </div>
+      </section>
+
+      <section class="cart-modal">
+        <div class="container">
+          <div class="cart" id="cart">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div class="cart-content"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="show-modal">
+        <div class="container">
+          <div class="show" id="show">
+            <div class="show-modal-content">
+              <span class="close">&times;</span>
+              <div class="show-content"></div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
