@@ -58,11 +58,18 @@ const renderProducts = (key) => {
           <button class="btn" id = "btn1" data-showid = "${item.id}"></button>
           <button class="btn" id = "btn2" data-id = "${item.id}"></button>
       </div>
-        <h1>${item.title}</h1>
-        <div class = 'price'>
+      <h1 class = "card-title">${item.title}</h1>
+      <div class = "stars">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+      </div>
+      <div class = 'price'>
           <h4>$${item.price * 0.76}</h4>
-          <h6>$${item.price}</h6>
-          <h6 class = 'percentage'>24% Off</h6>
+          <h5>$${item.price}</h5>
+          <h6 class = "percentage">24% Off</h6>
         </div>
       </div>
       `
