@@ -3,7 +3,8 @@ const products = document.querySelector(".products");
 const cart = document.querySelector(".cart");
 const show = document.querySelector(".show");
 const cart_modal_btn = document.getElementById("cart-button");
-const span = document.getElementsByClassName("close")[0];
+const span_cart = document.getElementsByClassName("close-cart")[0];
+const span_show = document.getElementsByClassName("close-show")[0];
 const cart_content = document.querySelector(".cart-content");
 const cart_count = document.querySelector(".cart-count");
 
@@ -69,6 +70,12 @@ const renderProducts = (key) => {
     });
 };
 
+products.addEventListener("click", (e) => {
+  if (e.target.dataset.id) {
+    fetch(`https://fakestoreapi.com/products/${id}`).then(res);
+  }
+});
+
 const getCategories = () => {
   fetch("https://fakestoreapi.com/products/categories")
     .then((res) => res.json())
@@ -98,8 +105,11 @@ cart_modal_btn.onclick = function () {
   cart.style.display = "block";
 };
 
-span.onclick = function () {
+span_cart.onclick = function () {
   cart.style.display = "none";
+};
+
+span_show.onclick = function () {
   show.style.display = "none";
 };
 
