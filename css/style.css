@@ -132,6 +132,7 @@ select {
   padding: 258px 425px 167px 110px;
   margin: 0px -88px;
   background: url(../images/Promotion\ Image.png);
+  background-repeat: no-repeat;
   background-size: contain;
 }
 

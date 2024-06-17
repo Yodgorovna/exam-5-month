@@ -6,6 +6,7 @@ const cart_modal_btn = document.getElementById("cart-button");
 const span_cart = document.getElementsByClassName("close-cart")[0];
 const span_show = document.getElementsByClassName("close-show")[0];
 const cart_content = document.querySelector(".cart-content");
+const show_content = document.querySelector(".show-content");
 const cart_count = document.querySelector(".cart-count");
 
 const getData = async () => {
@@ -54,7 +55,7 @@ const renderProducts = (key) => {
       <div class = 'card'>
         <img src = '${item.image}' class = "card-image"  alt = 'image'/>
         <div class="buttons">
-          <button class="btn" id = "btn1" data-id = "${item.id}"></button>
+          <button class="btn" id = "btn1" data-showid = "${item.id}"></button>
           <button class="btn" id = "btn2" data-id = "${item.id}"></button>
       </div>
         <h1>${item.title}</h1>
@@ -150,12 +151,19 @@ products.addEventListener("click", async (e) => {
 renderLocalData();
 
 products.addEventListener("click", async (e) => {
-  if (e.target.dataset.id) {
+  if (e.target.dataset.showid) {
     show.style.display = "block";
+    const data = await getSingleData(e.target.dataset.showid);
+    show_content.innerHTML = `
+    <div> <img width = '200' src = "${data.image}" alt = "img"/>
+    <h4>${data.title}</h4>
+    <p>${data.category}</p>
+    <p>${data.description}</p>
+    </div>`;
   }
 });
 
-cart.addEventListener("click", async (e) => {
+cart.addEventListener("click", (e) => {
   if (e.target.dataset.deleteid) {
     const data = getState("product");
 
