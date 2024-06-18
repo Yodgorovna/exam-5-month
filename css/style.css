@@ -397,7 +397,7 @@ select {
 }
 
 #btn1 {
-  background: url(../images/like.svg);
+  background: url(../images/more-line.svg);
 }
 
 #btn2 {
@@ -463,10 +463,17 @@ select {
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 50%;
+  width: 600px;
+  height: 600px;
 }
 
-.close-show {
+.show-content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.show-modal-content .close-show {
   color: #aaa;
   float: right;
   font-size: 28px;
@@ -478,4 +485,36 @@ select {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+.cart_block {
+  display: flex;
+  gap: 50px;
+  margin: 50px;
+  padding: 10px;
+}
+
+.cart_title {
+  width: 600px; /* Konteyner kengligini belgilash */
+  overflow: hidden;
+  display: -webkit-box; /* Flexbox usulida ko'rsatish */
+  -webkit-line-clamp: 2; /* Qatorlar sonini belgilash */
+  -webkit-box-orient: vertical; /* Vertikal yo'nalishda */
+  line-height: 1.2em; /* Qator balandligini belgilash */
+  text-overflow: ellipsis; /* Uch nuqta bilan belgilash */
+}
+
+.cart_button {
+  width: 9.11px;
+  height: 8.49px;
+  color: hsl(355, 100%, 63%);
+  border: none;
+  font-size: 36px;
+  background: none;
+}
+
+.img_block img {
+  size: cover;
+  width: 132px;
+  height: 94px;
 }

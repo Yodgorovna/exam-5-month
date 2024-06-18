@@ -134,10 +134,12 @@ const renderLocalData = () => {
     .map(
       (item) => `
   <div class = "cart_block">
+    <button class = "cart_button" data-deleteid = '${item.id}'>x</button>
     <div class = "img_block">
-      <img width = '100' src = "${item.image}" alt = "image"/>
+      <img src = "${item.image}" alt = "image"/>
     </div>
-    <button data-deleteid = '${item.id}'>remove</button>
+    <h1 class = "cart_title">${item.title}</h1>
+    <h1 class = "price">${item.price}$</h1>
   </div>`
     )
     .join("");
@@ -166,6 +168,7 @@ products.addEventListener("click", async (e) => {
     <h4>${data.title}</h4>
     <p>${data.category}</p>
     <p>${data.description}</p>
+    <p>Price:    ${data.price}$</p>
     </div>`;
   }
 });
